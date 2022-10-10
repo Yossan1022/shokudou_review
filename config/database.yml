@@ -21,10 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: shokudou_shop_production
-  username: shokudou_shop
-  password: <%= ENV['SHOKUDOU_SHOP_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
