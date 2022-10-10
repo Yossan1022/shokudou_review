@@ -1,0 +1,38 @@
+<section class="section mt-6">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-5">
+        <% @shokudou_shops.each do |shokudou_shop| %>
+          <div class="card mb-6">
+            <header class="card-header">
+              <p class="card-header-title">
+                <%= shokudou_shop.name %>
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <div class="content average-score">
+                  <div class="star-rating mb-2">
+                    <div class="star-rating-front" style="width: <%= shokudou_shop.review_score_percentage %>%">★★★★★</div>
+                    <div class="star-rating-back">★★★★★</div>
+                  </div>
+                  <div class="average-score-display ml-3 pt-2">
+                    <%= shokudou_shop.avg_score %>点（<%= shokudou_shop.reviews.count %>件のレビュー）
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <%= link_to shokudou_shop_reviews_path(shokudou_shop), class: "button card-footer-item" do %>
+                レビューを見る
+              <% end %>
+              <%= link_to shokudou_shop_path(shokudou_shop), class: "button card-footer-item" do %>
+                レビューを書く
+              <% end %>
+            </footer>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
