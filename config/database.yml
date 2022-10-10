@@ -25,6 +25,6 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: db/production.sqlite3
+  database: shokudou_review_production
   username: shokudou_review
   password: <%= ENV['SHOKUDOU_REVIEW_DATABASE_PASSWORD'] %>
