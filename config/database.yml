@@ -25,8 +25,8 @@ production:
   encoding: unicode
   pool: 5
   database: db/production.sqlite3
-  username: shokudou_review
-  password: <%= ENV['SHOKUDOU_REVIEW_DATABASE_PASSWORD'] %>
+  username: shokudou_shops
+  password: <%= ENV['SHOKUDOU_SHOPS_DATABASE_PASSWORD'] %>
   
   
   
