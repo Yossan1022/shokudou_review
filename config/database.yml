@@ -27,6 +27,6 @@ production:
   pool: 5
   database: db/test.sqlite3
   username: shokudou_review
-  password: <%= ENV['SHOKUDOU_REVIEW_DATABASE_PASSWORD'] %>
+  password: <%= ENV['SHOKUDOU_SHOP_DATABASE_PASSWORD'] %>
   
 
